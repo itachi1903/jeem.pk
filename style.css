@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    padding: 20px;
+    border: 5px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    border-radius:20px ;
+    backdrop-filter: blur(5px);
+}
+h2,h3 {
+    text-transform: capitalize;
+    font-size: 25px;
+}
+.warn {
+    font-size: 20px;
+    color: red;
+}
+.input-can {
+    position: relative;
+    width: 300px;
+}
+.input-can input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid;
+    background-color: transparent;
+    color: inherit;
+
+}
+.input-can label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 25px;
+    font-weight: 900;
+    transition: all .5s ease-in-out;
+}
+hr {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    border: none;
+    height: 5px;
+    border-radius:5px;
+    transform: scaleX(0);
+}
+.input-can input:focus ~ label ,
+.input-can input:valid ~ label {
+    bottom: 30px;
+    font-size: 15px;
+}
+input:focus hr {
+    transform: scaleX(1);
+}
+.btn {
+    height: 30px;
+    border-radius: 30px;
+}
+@media screen  and (max-width:1000px) {
+    .card {
+        width: 80%;
+    }
+    body {
+        background-image: url(2.jpg);
+    }
+}
